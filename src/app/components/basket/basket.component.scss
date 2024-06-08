@@ -1,0 +1,22 @@
+.mat-card {
+  max-height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  color: black;
+  margin: 10px;
+}
+mat-card-content {
+  font-weight: 500;
+  align-content: center;
+}
+.img {
+  padding: 2px;
+}
+.blocks {
+  width: 300px;
+}
+.deleteAll {
+  margin-top: 10px;
+}

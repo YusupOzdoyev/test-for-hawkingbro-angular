@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  margin-top: -80px;
+}
+
+.container {
+  margin: 0 auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.basket-container {
+  margin: 0 auto 0;
+  padding-bottom: 70px;
+}
+
+.image {
+  max-width: 300px;
+}

@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="toolbar no-select" routerLink="">
+      <mat-icon style="margin-right: 5px;">home</mat-icon>
+      <span>Test for Hawking Bro</span>
+    </div>
+    <span class="example-spacer"></span>
+    <div class="toolbar no-select">
+      <button class="toolbar button" mat-flat-button color="primary" routerLink="">Главная</button>
+      <button class="toolbar button" mat-flat-button color="primary" routerLink="products">Продукты</button>
+      <button class="toolbar button" mat-button [matMenuTriggerFor]="menu" routerLink="info">Инфо</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Фото</button>
+          <button mat-menu-item>Ссылки</button>
+          <button mat-menu-item>Описание</button>
+          <button mat-menu-item>Рекомендации</button>
+        </mat-menu>
+      <button class="toolbar button" mat-flat-button color="primary" routerLink="contacts">Контакты</button>
+      <button class="toolbar button" mat-flat-button color="primary" routerLink="basket">Корзина</button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

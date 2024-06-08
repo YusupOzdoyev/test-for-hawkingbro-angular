@@ -1,0 +1,20 @@
+<div class="basket-container content">
+  <mat-card class="total-cost">
+    <mat-card-title>Общая стоимость товаров: {{total}} руб</mat-card-title>
+  </mat-card>
+  <button class="button deleteAll" mat-flat-button color="primary" (click)="removeAll()">Очистить корзину</button>
+  <mat-card class="mat-card" *ngFor="let item of inBasket">
+    <img class="img" mat-card-sm-image src="../../../assets/images/1.webp"/>
+    <mat-card-content class="blocks">{{item.Name}}</mat-card-content>
+    <mat-card-content class="blocks">{{item.Price}}</mat-card-content>
+    <mat-card-content class="blocks">{{item.Unit}}</mat-card-content>
+    <mat-card-actions>
+      <button class="button" mat-icon-button color="primary" (click)="add(item)"><mat-icon>add</mat-icon></button>
+       {{item.Quantity}}
+      <button class="button" mat-icon-button color="primary" (click)="remove(item)"><mat-icon>remove</mat-icon></button>
+    </mat-card-actions>
+    <mat-card-actions>
+      <button class="button" mat-icon-button color="primary" (click)="deleteFromBasket(item)"><mat-icon>delete</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
+</div>
