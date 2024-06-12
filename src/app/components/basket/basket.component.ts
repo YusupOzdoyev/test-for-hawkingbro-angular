@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { IProduct } from '../../models/products';
-import { Component, OnInit, SimpleChanges, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -27,6 +27,7 @@ export class BasketComponent implements OnInit{
     this.ProductService.getProductsToBasket().pipe()
       .subscribe((data) => {
         this.inBasket = data;
+        this.getTotalCost();
       })
   }
 
@@ -58,6 +59,5 @@ export class BasketComponent implements OnInit{
     (accumulator: number, currentValue: { Price: number; Quantity: number; }) => accumulator + (currentValue.Price * currentValue.Quantity),
     initialValue,
     );
-    console.log(this.total)
   }
 }
