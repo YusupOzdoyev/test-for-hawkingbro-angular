@@ -4,7 +4,9 @@
   </mat-card>
   <button class="button deleteAll" mat-flat-button color="primary" (click)="removeAll()">Очистить корзину</button>
   <mat-card class="mat-card" *ngFor="let item of inBasket">
-    <img class="img" mat-card-sm-image src="../../../assets/images/1.webp"/>
+    <div >
+        <img class="img" mat-card-sm-image [src]="'data:imagestub/png;base64,' + item.Images[0].Image" alt="foto"/>
+    </div>
     <mat-card-content class="blocks">{{item.Name}}</mat-card-content>
     <mat-card-content class="blocks">{{item.Price}}</mat-card-content>
     <mat-card-content class="blocks">{{item.Unit}}</mat-card-content>

@@ -7,12 +7,13 @@ export interface IProduct {
     Сurrency: string,
     Price: number,
     DiscountedPrice: number,
-    Images: {
+    Images: [
+      {
         FileName: string,
         FileExtension: string,
         Image: string,
       }
- 
+    ]
 }
 export interface User{
   LogoImg: string,
