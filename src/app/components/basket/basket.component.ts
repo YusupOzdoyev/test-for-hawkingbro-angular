@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { IProduct } from '../../models/products';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, SimpleChanges, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
